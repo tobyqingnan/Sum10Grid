@@ -1,0 +1,32 @@
+<div class="grid-dialog-form">
+  <mat-grid-list cols="2" rowHeight="5:2">
+    <mat-grid-tile>Grid Size</mat-grid-tile>
+    <mat-grid-tile>
+      <input
+        class="gridSizeInput"
+        placeholder="grid size"
+        value="{{ gridSize }}"
+        [readonly]="true"
+      />
+    </mat-grid-tile>
+
+    <mat-grid-tile>Total Sum</mat-grid-tile>
+    <mat-grid-tile>
+      <input
+        matInput
+        class="totalSumInput"
+        placeholder=""
+        [(ngModel)]="totalSum"
+      />
+    </mat-grid-tile>  
+  </mat-grid-list>
+  <button mat-flat-button color="goButton" (click)="displayGrid()">
+    Go
+  </button>
+</div>
+<app-grid-result
+  *ngIf="displaySum != 0"
+  [gridSize]="gridSize"
+  [displaySum]="displaySum"
+  type="number"
+></app-grid-result>

@@ -1,0 +1,25 @@
+<div class="gridResult">
+  <mat-grid-list
+    cols="4"
+    rowHeight="4:3"
+    *ngFor="let itemRow of gridItems; let i = index"
+  >
+    <mat-grid-tile *ngFor="let itemCol of itemRow; let i = index">
+      <div class="gridCell">{{ itemCol }}</div></mat-grid-tile
+    >
+  </mat-grid-list>
+</div>
+<div>
+  <button
+    mat-flat-button
+    color="messageButton"
+    *ngIf="checkGridSumMessage != ''"
+    [ngClass]="{
+      successGridSum: isValidGridSum,
+      failedGridSum: !isValidGridSum
+    }"
+    (click)="hideCheckGrid()"
+  >
+    {{ checkGridSumMessage }}
+  </button>
+</div>

@@ -1,0 +1,35 @@
+.gridResult{
+  width: 400px;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 24px 0 0 24px
+}
+
+.gridCell{
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 24px;
+  width: 24px;
+  text-align: center;
+}
+
+mat-grid-list {
+  background: #f0f0f0;
+  width: 400px;
+  margin-bottom: 24px;
+}
+
+.mat-messageButton {
+  color: #ddd;
+  width: 424px;
+  margin-top: 8px;
+}
+
+.successGridSum{
+  background-color: green;
+}
+
+.failedGridSum{
+  background-color: red;
+}
